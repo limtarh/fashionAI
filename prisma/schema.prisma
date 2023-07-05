@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model inventory {
+  clothingID     Int     @id
+  description    String? @db.VarChar(500)
+  memory_address String? @db.VarChar(500)
+}
+
+model matching {
+  userID     String @db.VarChar(255)
+  clothingID Int
+
+  @@id([userID, clothingID])
+}

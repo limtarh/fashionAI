@@ -3,9 +3,9 @@ require('dotenv').config()
 
 const tf  = require('@tensorflow/tfjs');
 const use = require('@tensorflow-models/universal-sentence-encoder');
-const mysql = require('mysql2')
-console.log('Connected to PlanetScale!')
-const connection = mysql.createConnection(process.env.DATABASE_URL)
+//const mysql = require('mysql2')
+//console.log('Connected to PlanetScale!')
+//const connection = mysql.createConnection(process.env.DATABASE_URL)
 //connection.end()
 
 async function runQuery(query) {
